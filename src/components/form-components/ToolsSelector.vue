@@ -11,14 +11,14 @@
         :taggable="true"
         @tag="addTag"
         tag-placeholder="Press enter to add to your list"
-        max-height="200"
-      ></multiselect>
+        :max-height=200
+      />
     </div>
     <div class="c-form__row">
       <label class="c-label">
         Which of these is the most essential for getting your job done? If you have equally important software, please pick one.
       </label>
-      <multiselect v-model="mostImportantTool" :options="toolsUsed" max-height="200"></multiselect>
+      <multiselect v-model="mostImportantTool" :options="toolsUsed" :max-height=200></multiselect>
     </div>
     <div class="c-form__row">
       <p v-if="mostImportantTool">
@@ -30,14 +30,15 @@
 
 <script>
 import Multiselect from 'vue-multiselect';
-import { mapState, mapMutations } from 'vuex';
+import {mapMutations } from 'vuex';
 
-import options from '../../api/toolAutocomplete.js';
+import options from '../../api/toolAutocomplete';
 
 export default {
   name: 'ToolsSelector',
   components: { Multiselect },
   data() {
+    console.log(process.env);
     return {
       options,
     };
