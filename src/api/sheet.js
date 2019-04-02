@@ -13,8 +13,6 @@ function postData(row) {
   })
     .then((resp) => {
       console.log(resp);
-      if (resp.ok) {
-      }
     })
     .catch(error => console.error(error));
 }

@@ -44,8 +44,8 @@
           :storeValue="tasksUsed"
           :changeMethod="updateTasksUsed"
           :options="toolUseOptions"
-          :otherValue="newsOrgTypeOther"
-          :otherChangeMethod="updateNewsOrgTypeOther"
+          :otherValue="tasksUsedOther"
+          :otherChangeMethod="updateTasksUsedOther"
         >
         </CheckboxGroup>
         <RadioGroup
@@ -131,7 +131,9 @@
           :value="email"
           :changeMethod="updateEmail"
         />
-        <a href="#" v-on:click="onSubmit">Submit</a>
+        <div class="c-form__row">
+          <a class="submit" href="#" v-on:click="onSubmit">Submit</a>
+        </div>
       </fieldset>
     </form>
   </div>
@@ -223,10 +225,22 @@ $rhythm: 50px;
 
 .boilerform [class*="-field"] {
   font-family: 'Work Sans', sans-serif;
+
+  &:focus {
+    border-color: #D62828
+  }
+}
+
+.boilerform .c-form__heading {
+  border-color: #D62828;
 }
 
 .boilerform .c-check-field {
   align-items: center;
+}
+
+.boilerform .c-check-field__decor::after {
+  background-color: #D62828;
 }
 
 // Form component
@@ -261,6 +275,19 @@ $rhythm: 50px;
     // Make any field fill at least 2/3
     [name] {
       min-width: percentage(2/3);
+    }
+  }
+
+  .submit {
+    background-color: #D62828;
+    color: white;
+    padding: 15px;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      background-color: darken(#D62828, 10%);
     }
   }
 }
