@@ -10,16 +10,19 @@ export default new Vuex.Store({
     jobTitle: null,
     jobDuties: null,
     newsOrgType: null,
+    newsOrgTypeOther: null,
     newsOrgAge: null,
     toolsUsed: [],
     mostImportantTool: null,
     tasksUsed: [],
+    tasksUsedOther: null,
     toolSatisfaction: null,
     toolRecommendation: null,
     toolRecommendationWhyNot: null,
     stoppedUsing: null,
     whyStoppedUsing: null,
     orgStruggles: [],
+    orgStrugglesOther: null,
     orgComparison: null,
     orgCommunication: null,
     orgSustainability: null,
@@ -36,8 +39,11 @@ export default new Vuex.Store({
     updateNewsOrgType(state, value) {
       state.newsOrgType = value;
     },
+    updateNewsOrgTypeOther(state, value) {
+      state.newsOrgTypeOther = value;
+    },
     updateNewsOrgAge(state, value) {
-      state.newOrgAge = value;
+      state.newsOrgAge = value;
     },
     updateToolsUsed(state, value) {
       state.toolsUsed = value;
@@ -47,6 +53,9 @@ export default new Vuex.Store({
     },
     updateTasksUsed(state, value) {
       state.tasksUsed = value;
+    },
+    updateTasksUsedOther(state, value) {
+      state.tasksUsedOther = value;
     },
     updateToolSatisfaction(state, value) {
       state.toolSatisfaction = value;
@@ -66,8 +75,11 @@ export default new Vuex.Store({
     updateOrgStruggles(state, value) {
       state.orgStruggles = value;
     },
+    updateOrgStrugglesOther(state, value) {
+      state.orgStrugglesOther = value;
+    },
     updateOrgComparison(state, value) {
-      state.orgComparision = value;
+      state.orgComparison = value;
     },
     updateOrgCommunication(state, value) {
       state.orgCommunication = value;

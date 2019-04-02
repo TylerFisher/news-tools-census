@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import store from './store/index';
-
+import 'typeface-work-sans';
 import 'normalize.css/normalize.css';
 
 Vue.config.productionTip = false;

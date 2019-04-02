@@ -12,5 +12,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  #intro {
+    max-width: 600px;
+    margin: 0 auto;
 
+    h1 {
+      font-family: 'Work Sans', sans-serif;
+      text-align: center;
+    }
+
+    p {
+      font-size: 20px;
+      font-family: 'Work Sans', sans-serif;
+      line-height: 1.5;
+    }
+  }
 </style>
