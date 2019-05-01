@@ -31,32 +31,44 @@ export default {
   ],
   toolUseOptions: [
     {
-      uid: 'information-gathering',
-      label: 'Information gathering',
-    },
-    {
-      uid: 'writing-producing',
-      label: 'Writing or producing',
-    },
-    {
-      uid: 'editing',
-      label: 'Editing',
-    },
-    {
-      uid: 'audience-engagement',
-      label: 'Audience engagement',
+      uid: 'advertising-marketing',
+      label: 'Advertising or marketing',
     },
     {
       uid: 'analysis',
       label: 'Analysis',
     },
     {
+      uid: 'audience-engagement',
+      label: 'Audience engagement',
+    },
+    {
+      uid: 'editing',
+      label: 'Editing',
+    },
+    {
+      uid: 'information-gathering',
+      label: 'Information gathering',
+    },
+    {
       uid: 'project-management',
       label: 'Project management',
     },
     {
+      uid: 'promoting-content',
+      label: 'Promoting content',
+    },
+    {
+      uid: 'publishing',
+      label: 'Publishing',
+    },
+    {
       uid: 'storage-archiving',
       label: 'Storage or archiving',
+    },
+    {
+      uid: 'writing-producing',
+      label: 'Writing or producing',
     },
     {
       uid: 'use-other',

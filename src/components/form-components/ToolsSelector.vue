@@ -13,7 +13,7 @@
         tag-placeholder="Press enter to add to your list"
         :max-height=200
       />
-      <span class="extra"><em>If a tool you use is not in the dropdown, just type the name in full and press enter.</em></span>
+      <span class="extra"><em>If a tool you use is not in the dropdown, type the name in full and press enter.</em></span>
     </div>
     <div class="c-form__row">
       <label class="c-label">
