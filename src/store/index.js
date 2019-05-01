@@ -21,7 +21,7 @@ export default new Vuex.Store({
     toolRecommendationWhyNot: null,
     stoppedUsing: null,
     whyStoppedUsing: null,
-    orgStruggles: [],
+    orgStruggles: null,
     orgStrugglesOther: null,
     orgComparison: null,
     orgCommunication: null,

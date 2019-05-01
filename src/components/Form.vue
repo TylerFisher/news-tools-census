@@ -8,14 +8,14 @@
         <legend class="c-form__heading">Your job</legend>
         <SingleText
           label="What is your job title?"
-          placeholder="News Apps Developer"
+          placeholder="Example: News Apps Developer"
           uid="job-title"
           :value="jobTitle"
           :changeMethod="updateJobTitle"
         />
         <Paragraph
           label="Briefly describe your duties in your job."
-          placeholder="As the news apps developer at my newspaper, I develop data-driven applications for investigative projects in our newsroom."
+          placeholder="Example: As the news apps developer at my newspaper, I develop data-driven applications for investigative projects in our newsroom."
           uid="job-desc"
           :value="jobDuties"
           :changeMethod="updateJobDuties"
@@ -89,8 +89,8 @@
       </fieldset>
       <fieldset class="c-form">
         <legend class="c-form__heading">Organizational needs</legend>
-        <CheckboxGroup
-          question="Whether you work directly with this technology or not, where do you think your organization struggles most technologically? Please pick no more than two."
+        <RadioGroup
+          question="Whether you work directly with this technology or not, where do you think your organization struggles most technologically?"
           :storeValue="orgStruggles"
           :changeMethod="updateOrgStruggles"
           :options="struggleOptions"

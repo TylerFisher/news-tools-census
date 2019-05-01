@@ -2,11 +2,11 @@ export default {
   struggleOptions: [
     {
       uid: 'content-management',
-      label: 'Content management',
+      label: 'Content management systems (CMS)',
     },
     {
-      uid: 'data-storage',
-      label: 'Data storage',
+      uid: 'customer-relationship-management',
+      label: 'Customer relationship management (CRM)',
     },
     {
       uid: 'data-visualization',
@@ -17,8 +17,8 @@ export default {
       label: 'Analytics or metrics',
     },
     {
-      uid: 'product-design',
-      label: 'Product design',
+      uid: 'product',
+      label: 'Product',
     },
     {
       uid: 'multimedia-production-editing',
@@ -51,6 +51,14 @@ export default {
       label: 'Analysis',
     },
     {
+      uid: 'project-management',
+      label: 'Project management',
+    },
+    {
+      uid: 'storage-archiving',
+      label: 'Storage or archiving',
+    },
+    {
       uid: 'use-other',
       label: 'Other',
     },
@@ -78,7 +86,7 @@ export default {
     },
     {
       uid: 'public-radio',
-      label: 'Public radio'
+      label: 'Public radio',
     },
     {
       uid: 'commercial-radio',
@@ -187,7 +195,7 @@ export default {
     {
       uid: 'comparison-very-unfavorably',
       label: 'Very unfavorably',
-    }
+    },
   ],
   orgCommunicationOptions: [
     {
@@ -208,7 +216,7 @@ export default {
     },
     {
       uid: 'communication-idk',
-      label: 'I don\'t know'
+      label: 'I don\'t know',
     },
   ],
   orgSustainabilityOptions: [
