@@ -1,18 +1,21 @@
 <template>
   <div id="form">
     <form id="survey" class="boilerform">
+      <div v-if="showValidationError" class="validation">
+        Please fill out all required fields.
+      </div>
       <fieldset class="c-form">
         <legend class="c-form__heading">Your job</legend>
         <SingleText
           label="What is your job title?"
-          placeholder="Editor"
+          placeholder="News Apps Developer"
           uid="job-title"
           :value="jobTitle"
           :changeMethod="updateJobTitle"
         />
         <Paragraph
           label="Briefly describe your duties in your job."
-          placeholder="Editing words"
+          placeholder="As the news apps developer at my newspaper, I develop data-driven applications for investigative projects in our newsroom."
           uid="job-desc"
           :value="jobDuties"
           :changeMethod="updateJobDuties"
@@ -64,7 +67,7 @@
         >
         </RadioGroup>
         <Paragraph
-          label="If not, why not?"
+          label="If not, why not? (optional)"
           uid="if-not-recommend"
           :value="toolRecommendationWhyNot"
           :changeMethod="updateToolRecommendationWhyNot"
@@ -77,7 +80,7 @@
           :changeMethod="updateStoppedUsing"
         />
         <Paragraph
-          label="If so, why?"
+          label="If so, why? (optional)"
           uid="if-stopped-using"
           placeholder="Why did you stop using the software?"
           :value="whyStoppedUsing"
@@ -127,7 +130,7 @@
         />
         <Email
           uid="email"
-          label="If so, please enter your email"
+          label="If so, please enter your email (optional)"
           :value="email"
           :changeMethod="updateEmail"
         />
@@ -162,7 +165,10 @@ export default {
     ToolsSelector,
   },
   data() {
-    return questions;
+    return {
+      ...questions,
+      showValidationError: false,
+    };
   },
   computed: mapState([
     'jobTitle',
@@ -207,8 +213,14 @@ export default {
       'updateTalkMore',
       'updateEmail',
     ]),
-    onSubmit(e) {
-      postData(this.$store.state);
+    onSubmit() {
+      const formPost = postData(this.$store.state);
+
+      if (!formPost) {
+        this.showValidationError = true;
+      } else {
+        this.showValidationError = false;
+      }
     },
   },
 };
@@ -218,6 +230,18 @@ export default {
 <style lang="scss">
 // Vars
 $rhythm: 50px;
+
+.validation {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 24px;
+  background-color: #D62828;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
 
 .boilerform .c-label+[class*="field"] {
   margin-top: 5px;

@@ -13,6 +13,7 @@
         tag-placeholder="Press enter to add to your list"
         :max-height=200
       />
+      <span class="extra"><em>If a tool you use is not in the dropdown, just type the name in full and press enter.</em></span>
     </div>
     <div class="c-form__row">
       <label class="c-label">
@@ -30,7 +31,7 @@
 
 <script>
 import Multiselect from 'vue-multiselect';
-import {mapMutations } from 'vuex';
+import { mapMutations } from 'vuex';
 
 import options from '../../api/toolAutocomplete';
 
@@ -38,9 +39,12 @@ export default {
   name: 'ToolsSelector',
   components: { Multiselect },
   data() {
-    console.log(process.env);
     return {
-      options,
+      options: options.sort((a, b) => {
+        if (a.toLowerCase() < b.toLowerCase()) return -1;
+        if (a.toLowerCase() > b.toLowerCase()) return 1;
+        return 0;
+      }),
     };
   },
   computed: {
@@ -95,5 +99,8 @@ export default {
     color: white;
   }
 }
-</style>
+.extra {
+  display: block;
+  margin-top: 10px;
 }
+</style>
