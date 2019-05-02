@@ -103,4 +103,8 @@ export default {
   display: block;
   margin-top: 10px;
 }
+
+p {
+  font-family: 'Work Sans', sans-serif;
+}
 </style>

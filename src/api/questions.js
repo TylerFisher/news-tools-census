@@ -43,6 +43,14 @@ export default {
       label: 'Audience engagement',
     },
     {
+      uid: 'design',
+      label: 'Design',
+    },
+    {
+      uid: 'development',
+      label: 'Development',
+    },
+    {
       uid: 'editing',
       label: 'Editing',
     },

@@ -42,50 +42,52 @@
           Third-party software
         </legend>
         <ToolsSelector />
-        <CheckboxGroup
-          question="What tasks do you use this software for (check all that apply)?"
-          :storeValue="tasksUsed"
-          :changeMethod="updateTasksUsed"
-          :options="toolUseOptions"
-          :otherValue="tasksUsedOther"
-          :otherChangeMethod="updateTasksUsedOther"
-        >
-        </CheckboxGroup>
-        <RadioGroup
-          question="How satisfied are you with this software?"
-          groupName="toolSatisfaction"
-          :storeValue="toolSatisfaction"
-          :changeMethod="updateToolSatisfaction"
-          :options="toolSatisfactionOptions"
-        />
-        <RadioGroup
-          question="How strongly would you recommend this software to someone else performing your job?"
-          groupName="toolRecommendation"
-          :storeValue="toolRecommendation"
-          :changeMethod="updateToolRecommendation"
-          :options="toolRecommendationOptions"
-        >
-        </RadioGroup>
-        <Paragraph
-          label="If not, why not? (optional)"
-          uid="if-not-recommend"
-          :value="toolRecommendationWhyNot"
-          :changeMethod="updateToolRecommendationWhyNot"
-        />
-        <SingleText
-          label="Is there any software you have recently stopped using?"
-          uid="stopped-using"
-          placeholder="name of software"
-          :value="stoppedUsing"
-          :changeMethod="updateStoppedUsing"
-        />
-        <Paragraph
-          label="If so, why? (optional)"
-          uid="if-stopped-using"
-          placeholder="Why did you stop using the software?"
-          :value="whyStoppedUsing"
-          :changeMethod="updateWhyStoppedUsing"
-        />
+        <div class="dependent" v-if="mostImportantTool">
+          <CheckboxGroup
+            question="What tasks do you use this software for (check all that apply)?"
+            :storeValue="tasksUsed"
+            :changeMethod="updateTasksUsed"
+            :options="toolUseOptions"
+            :otherValue="tasksUsedOther"
+            :otherChangeMethod="updateTasksUsedOther"
+          >
+          </CheckboxGroup>
+          <RadioGroup
+            question="How satisfied are you with this software?"
+            groupName="toolSatisfaction"
+            :storeValue="toolSatisfaction"
+            :changeMethod="updateToolSatisfaction"
+            :options="toolSatisfactionOptions"
+          />
+          <RadioGroup
+            question="How strongly would you recommend this software to someone else performing your job?"
+            groupName="toolRecommendation"
+            :storeValue="toolRecommendation"
+            :changeMethod="updateToolRecommendation"
+            :options="toolRecommendationOptions"
+          >
+          </RadioGroup>
+          <Paragraph
+            label="If not, why not? (optional)"
+            uid="if-not-recommend"
+            :value="toolRecommendationWhyNot"
+            :changeMethod="updateToolRecommendationWhyNot"
+          />
+          <SingleText
+            label="Is there any software you have recently stopped using?"
+            uid="stopped-using"
+            placeholder="name of software"
+            :value="stoppedUsing"
+            :changeMethod="updateStoppedUsing"
+          />
+          <Paragraph
+            label="If so, why? (optional)"
+            uid="if-stopped-using"
+            placeholder="Why did you stop using the software?"
+            :value="whyStoppedUsing"
+            :changeMethod="updateWhyStoppedUsing"
+          />
+        </div>
       </fieldset>
       <fieldset class="c-form">
         <legend class="c-form__heading">Organizational needs</legend>
@@ -190,6 +192,7 @@ export default {
     'orgSustainability',
     'talkMore',
     'email',
+    'mostImportantTool',
   ]),
   methods: {
     ...mapMutations([
