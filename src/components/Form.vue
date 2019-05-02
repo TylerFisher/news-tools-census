@@ -1,9 +1,12 @@
 <template>
   <div id="form">
-    <form id="survey" class="boilerform">
-      <div v-if="showValidationError" class="validation">
-        Please fill out all required fields.
-      </div>
+    <div v-if="showValidationError" class="validation">
+      Please fill out all required fields.
+    </div>
+    <div v-if="showThankYouScreen" class="thank-you">
+      <p>Thank you for completing this survey!</p>
+    </div>
+    <form id="survey" class="boilerform" v-if="!showThankYouScreen">
       <fieldset class="c-form">
         <legend class="c-form__heading">Your job</legend>
         <SingleText
@@ -75,7 +78,7 @@
             :changeMethod="updateToolRecommendationWhyNot"
           />
           <SingleText
-            label="Is there any software you have recently stopped using?"
+            label="Is there any software you have recently stopped using? (optional)"
             uid="stopped-using"
             placeholder="name of software"
             :value="stoppedUsing"
@@ -171,6 +174,7 @@ export default {
     return {
       ...questions,
       showValidationError: false,
+      showThankYouScreen: false,
     };
   },
   computed: mapState([
@@ -224,6 +228,7 @@ export default {
         this.showValidationError = true;
       } else {
         this.showValidationError = false;
+        this.showThankYouScreen = true;
       }
     },
   },
@@ -245,6 +250,12 @@ $rhythm: 50px;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
+}
+
+.thank-you {
+  max-width: 600px;
+  margin: 0 auto;
+  p { font-size: 20px; }
 }
 
 .boilerform .c-label+[class*="field"] {
