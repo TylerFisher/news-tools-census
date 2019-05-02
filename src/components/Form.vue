@@ -42,6 +42,7 @@
           Third-party software
         </legend>
         <ToolsSelector />
+        <p v-if="!mostImportantTool">Please answer the above questions to continue this section of the survey.</p>
         <div class="dependent" v-if="mostImportantTool">
           <CheckboxGroup
             question="What tasks do you use this software for (check all that apply)?"
