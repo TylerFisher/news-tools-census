@@ -4,7 +4,7 @@
       Please fill out all required fields.
     </div>
     <div v-if="showThankYouScreen" class="thank-you">
-      <p>Thank you for completing this survey!</p>
+      <p><strong>Thank you for completing this survey!</strong></p>
     </div>
     <form id="survey" class="boilerform" v-if="!showThankYouScreen">
       <fieldset class="c-form">
