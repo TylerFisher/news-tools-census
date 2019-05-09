@@ -126,5 +126,4 @@ export default [
   'MuckRock',
   'FOIA Machine',
   'Klaxon',
-  'R',
 ]
