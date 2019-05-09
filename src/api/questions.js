@@ -140,15 +140,19 @@ export default {
     },
     {
       uid: 'teen',
-      label: '10-24 years',
+      label: '10-19 years',
     },
     {
       uid: 'young',
-      label: '25-49 years',
+      label: '20-29 years',
+    },
+    {
+      uid: 'middle',
+      label: '30-39 years',
     },
     {
       uid: 'old',
-      label: '50+ years',
+      label: '40+ years',
     },
   ],
   toolSatisfactionOptions: [
