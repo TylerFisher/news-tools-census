@@ -16,6 +16,7 @@ export default {
   #intro {
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 15px;
 
     h1 {
       font-family: 'Work Sans', sans-serif;
