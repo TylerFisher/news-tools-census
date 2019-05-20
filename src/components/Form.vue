@@ -301,6 +301,7 @@ $rhythm: 50px;
   }
 
   .c-label {
+    display: flex;
     font-size: 1.1rem;
     line-height: 1.5;
     font-family: 'Work Sans', sans-serif;
