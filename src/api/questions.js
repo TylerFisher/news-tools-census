@@ -98,11 +98,15 @@ export default {
     },
     {
       uid: 'radio',
-      label: 'Radio station or network',
+      label: 'Commercial radio station or network',
     },
     {
       uid: 'television',
-      label: 'Television station or network',
+      label: 'Commercial television station or network',
+    },
+    {
+      uid: 'public-media',
+      label: 'Public media',
     },
     {
       uid: 'wire-service',
