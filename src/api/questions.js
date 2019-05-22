@@ -85,48 +85,32 @@ export default {
   ],
   newsOrgTypeOptions: [
     {
-      uid: 'metro',
-      label: 'Metro newspaper publisher',
-    },
-    {
-      uid: 'suburban',
-      label: 'Suburban or regional rural daily newspaper',
-    },
-    {
-      uid: 'weekly',
-      label: 'Weekly newspaper',
-    },
-    {
-      uid: 'digital-general',
-      label: 'Digital-only general news organization',
-    },
-    {
-      uid: 'digital-single',
-      label: 'Digital-only single subject news organization',
-    },
-    {
-      uid: 'public-radio',
-      label: 'Public radio',
-    },
-    {
-      uid: 'commercial-radio',
-      label: 'Commercial radio',
-    },
-    {
-      uid: 'public-television',
-      label: 'Public television',
-    },
-    {
-      uid: 'commercial-television',
-      label: 'Commercial Television',
-    },
-    {
-      uid: 'ethnic',
-      label: 'Ethnic media organization',
+      uid: 'newspaper',
+      label: 'Newspaper',
     },
     {
       uid: 'magazine',
       label: 'Magazine',
+    },
+    {
+      uid: 'digital-only',
+      label: 'Digital-only',
+    },
+    {
+      uid: 'radio',
+      label: 'Radio',
+    },
+    {
+      uid: 'television',
+      label: 'Television',
+    },
+    {
+      uid: 'wire-service',
+      label: 'Wire service',
+    },
+    {
+      uid: 'corporate-media',
+      label: 'Corporate media/national team',
     },
     {
       uid: 'other-news-org-type',
