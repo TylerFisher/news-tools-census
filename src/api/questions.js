@@ -86,7 +86,7 @@ export default {
   newsOrgTypeOptions: [
     {
       uid: 'newspaper',
-      label: 'Newspaper',
+      label: 'Newspaper publisher',
     },
     {
       uid: 'magazine',
@@ -98,11 +98,11 @@ export default {
     },
     {
       uid: 'radio',
-      label: 'Radio',
+      label: 'Radio station or network',
     },
     {
       uid: 'television',
-      label: 'Television',
+      label: 'Television station or network',
     },
     {
       uid: 'wire-service',
@@ -110,7 +110,7 @@ export default {
     },
     {
       uid: 'corporate-media',
-      label: 'Corporate media/national team',
+      label: 'Corporate chain/national team',
     },
     {
       uid: 'other-news-org-type',
