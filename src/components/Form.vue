@@ -23,6 +23,13 @@
           :value="jobDuties"
           :changeMethod="updateJobDuties"
         />
+        <SingleText
+          label="What news organization do you work for? (optional)"
+          placeholder="The Middletown Gazette"
+          uid="news-org-name"
+          :value="newsOrgName"
+          :changeMethod="updateNewsOrgName"
+        />
         <RadioGroup
           question="What type of news organization do you work for?"
           groupName="newsOrgType"
@@ -180,6 +187,7 @@ export default {
   computed: mapState([
     'jobTitle',
     'jobDuties',
+    'newsOrgName',
     'newsOrgType',
     'newsOrgTypeOther',
     'newsOrgAge',
@@ -203,6 +211,7 @@ export default {
     ...mapMutations([
       'updateJobTitle',
       'updateJobDuties',
+      'updateNewsOrgName',
       'updateNewsOrgType',
       'updateNewsOrgTypeOther',
       'updateNewsOrgAge',

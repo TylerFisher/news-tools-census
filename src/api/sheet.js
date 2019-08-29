@@ -7,12 +7,9 @@ function postData(row) {
   fetch(process.env.VUE_APP_LAMBDA_ENDPOINT, {
     method: 'POST',
     headers: {
-      'Content-Type': 'text/plain',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      method: 'append',
-      sheet: process.env.VUE_APP_LAMBDA_SHEET_TITLE,
-      authorization: process.env.VUE_APP_LAMBDA_AUTH_TOKEN,
       ...row,
     }),
   })

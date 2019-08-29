@@ -9,6 +9,7 @@ export default new Vuex.Store({
   state: {
     jobTitle: null,
     jobDuties: null,
+    newsOrgName: null,
     newsOrgType: null,
     newsOrgTypeOther: null,
     newsOrgAge: null,
@@ -35,6 +36,9 @@ export default new Vuex.Store({
     },
     updateJobDuties(state, value) {
       state.jobDuties = value;
+    },
+    updateNewsOrgName(state, value) {
+      state.newsOrgName = value;
     },
     updateNewsOrgType(state, value) {
       state.newsOrgType = value;
