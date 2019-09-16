@@ -83,7 +83,7 @@ export default {
 
 <style lang="scss">
 .multiselect__tag {
-  background-color: #D62828;
+  background-color: #C6813C;
 }
 
 .multiselect {
@@ -91,9 +91,9 @@ export default {
   font-family: 'Work Sans', sans-serif;
 
   .multiselect__option--highlight {
-    background: #D62828;
+    background: #C6813C;
     &:after {
-      background: #D62828;
+      background: #C6813C;
     }
   }
   .multiselect__tag-icon::after {

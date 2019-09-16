@@ -254,7 +254,7 @@ $rhythm: 50px;
   margin: 0 auto;
   font-family: 'Work Sans', sans-serif;
   font-size: 24px;
-  background-color: #D62828;
+  background-color: #C6813C;
   color: white;
   padding: 20px;
   box-sizing: border-box;
@@ -275,12 +275,12 @@ $rhythm: 50px;
   font-family: 'Work Sans', sans-serif;
 
   &:focus {
-    border-color: #D62828
+    border-color: #C6813C
   }
 }
 
 .boilerform .c-form__heading {
-  border-color: #D62828;
+  border-color: #C6813C;
 }
 
 .boilerform .c-check-field {
@@ -288,7 +288,7 @@ $rhythm: 50px;
 }
 
 .boilerform .c-check-field__decor::after {
-  background-color: #D62828;
+  background-color: #C6813C;
 }
 
 // Form component
@@ -328,7 +328,7 @@ $rhythm: 50px;
   }
 
   .submit {
-    background-color: #D62828;
+    background-color: #C6813C;
     color: white;
     padding: 15px;
     font-family: 'Work Sans', sans-serif;
@@ -336,7 +336,7 @@ $rhythm: 50px;
     font-weight: bold;
 
     &:hover {
-      background-color: darken(#D62828, 10%);
+      background-color: darken(#C6813C, 10%);
     }
   }
 }
